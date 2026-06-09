@@ -10,9 +10,9 @@ public class ScreenshotUtil {
 
 	public static String captureScreenshot(WebDriver driver,String fileName) throws IOException {
 
-	    //String timestamp =String.valueOf(System.currentTimeMillis());
+	    String timestamp =String.valueOf(System.currentTimeMillis());
 
-	    String path =System.getProperty("user.dir")+ "\\Screenshots\\"+ fileName + "_"+ ".png";
+	    String path =System.getProperty("user.dir")+ "\\Screenshots\\"+ fileName +timestamp+ ".png";
 
 	    File src =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 

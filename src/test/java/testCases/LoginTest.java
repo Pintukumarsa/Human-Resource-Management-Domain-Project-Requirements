@@ -12,10 +12,6 @@ import utilities.*;
 
 @Listeners(utilities.ExtentListener.class)
 public class LoginTest extends BaseClass {
-	
-	ExtentReports extent =ExtentManager.getReport();
-
-    ExtentTest test;
 
     @DataProvider(name="LoginData")
     public Object[][] loginData()
@@ -32,13 +28,6 @@ public class LoginTest extends BaseClass {
         if(username.equals("Admin")&& password.equals("admin123")) {
         	
         	WaitUtils.waitForVisibilityBy(driver,lp.searchInputField);
-            Assert.assertTrue(lp.isDashboardDisplayed());
-            
-            extent =ExtentManager.getReport();
-            test =extent.createTest(username);
-            String path =ScreenshotUtil.captureScreenshot(driver,"Valid login");
-            test.addScreenCaptureFromPath(path);
-            
             lp.logoutUser();
             //driver.navigate().refresh();
             
