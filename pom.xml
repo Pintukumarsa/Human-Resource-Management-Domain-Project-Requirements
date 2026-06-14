@@ -106,7 +106,7 @@
 
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>testExecute.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
